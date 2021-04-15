@@ -1,0 +1,132 @@
+==21738== Memcheck, a memory error detector
+==21738== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==21738== Using Valgrind-3.13.0 and LibVEX; rerun with -h for copyright info
+==21738== Command: ./proxy 17642
+==21738== Parent PID: 21729
+==21738== 
+--21738-- 
+--21738-- Valgrind options:
+--21738--    --log-file=/home/student/Desktop/Proxy2Again/PL2/log_i2dnsoe1
+--21738--    --leak-check=full
+--21738--    -v
+--21738-- Contents of /proc/version:
+--21738--   Linux version 4.15.0-141-generic (buildd@lcy01-amd64-022) (gcc version 7.5.0 (Ubuntu 7.5.0-3ubuntu1~18.04)) #145-Ubuntu SMP Wed Mar 24 18:08:07 UTC 2021
+--21738-- 
+--21738-- Arch and hwcaps: AMD64, LittleEndian, amd64-cx16-lzcnt-rdtscp-sse3-avx-avx2-bmi
+--21738-- Page sizes: currently 4096, max supported 4096
+--21738-- Valgrind library directory: /usr/lib/valgrind
+--21738-- Reading syms from /home/student/Desktop/Proxy2Again/PL2/proxy
+--21738-- Reading syms from /lib/x86_64-linux-gnu/ld-2.27.so
+--21738--   Considering /lib/x86_64-linux-gnu/ld-2.27.so ..
+--21738--   .. CRC mismatch (computed 0ef8daab wanted 65bccefe)
+--21738--   Considering /usr/lib/debug/lib/x86_64-linux-gnu/ld-2.27.so ..
+--21738--   .. CRC is valid
+--21738-- Reading syms from /usr/lib/valgrind/memcheck-amd64-linux
+--21738--   Considering /usr/lib/valgrind/memcheck-amd64-linux ..
+--21738--   .. CRC mismatch (computed 41ddb025 wanted 9972f546)
+--21738--    object doesn't have a symbol table
+--21738--    object doesn't have a dynamic symbol table
+--21738-- Scheduler: using generic scheduler lock implementation.
+--21738-- Reading suppressions file: /usr/lib/valgrind/default.supp
+==21738== embedded gdbserver: reading from /tmp/vgdb-pipe-from-vgdb-to-21738-by-student-on-???
+==21738== embedded gdbserver: writing to   /tmp/vgdb-pipe-to-vgdb-from-21738-by-student-on-???
+==21738== embedded gdbserver: shared mem   /tmp/vgdb-pipe-shared-mem-vgdb-21738-by-student-on-???
+==21738== 
+==21738== TO CONTROL THIS PROCESS USING vgdb (which you probably
+==21738== don't want to do, unless you know exactly what you're doing,
+==21738== or are doing some strange experiment):
+==21738==   /usr/lib/valgrind/../../bin/vgdb --pid=21738 ...command...
+==21738== 
+==21738== TO DEBUG THIS PROCESS USING GDB: start GDB like this
+==21738==   /path/to/gdb ./proxy
+==21738== and then give GDB the following command
+==21738==   target remote | /usr/lib/valgrind/../../bin/vgdb --pid=21738
+==21738== --pid is optional if only one valgrind process is running
+==21738== 
+--21738-- REDIR: 0x4020d20 (ld-linux-x86-64.so.2:strlen) redirected to 0x580608c1 (???)
+--21738-- REDIR: 0x4020b00 (ld-linux-x86-64.so.2:index) redirected to 0x580608db (???)
+--21738-- Reading syms from /usr/lib/valgrind/vgpreload_core-amd64-linux.so
+--21738--   Considering /usr/lib/valgrind/vgpreload_core-amd64-linux.so ..
+--21738--   .. CRC mismatch (computed 50df1b30 wanted 4800a4cf)
+--21738--    object doesn't have a symbol table
+--21738-- Reading syms from /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so
+--21738--   Considering /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so ..
+--21738--   .. CRC mismatch (computed f893b962 wanted 95ee359e)
+--21738--    object doesn't have a symbol table
+==21738== WARNING: new redirection conflicts with existing -- ignoring it
+--21738--     old: 0x04020d20 (strlen              ) R-> (0000.0) 0x580608c1 ???
+--21738--     new: 0x04020d20 (strlen              ) R-> (2007.0) 0x04c34db0 strlen
+--21738-- REDIR: 0x401d540 (ld-linux-x86-64.so.2:strcmp) redirected to 0x4c35ee0 (strcmp)
+--21738-- REDIR: 0x4021260 (ld-linux-x86-64.so.2:mempcpy) redirected to 0x4c394f0 (mempcpy)
+--21738-- Reading syms from /lib/x86_64-linux-gnu/libpthread-2.27.so
+--21738--   Considering /usr/lib/debug/.build-id/68/f36706eb2e6eee4046c4fdca2a19540b2f6113.debug ..
+--21738--   .. build-id is valid
+--21738-- Reading syms from /lib/x86_64-linux-gnu/libc-2.27.so
+--21738--   Considering /lib/x86_64-linux-gnu/libc-2.27.so ..
+--21738--   .. CRC mismatch (computed cb654923 wanted 8713c55a)
+--21738--   Considering /usr/lib/debug/lib/x86_64-linux-gnu/libc-2.27.so ..
+--21738--   .. CRC is valid
+--21738-- REDIR: 0x50fbb70 (libc.so.6:memmove) redirected to 0x4a2c6e0 (_vgnU_ifunc_wrapper)
+--21738-- REDIR: 0x50fae80 (libc.so.6:strncpy) redirected to 0x4a2c6e0 (_vgnU_ifunc_wrapper)
+--21738-- REDIR: 0x50fbe50 (libc.so.6:strcasecmp) redirected to 0x4a2c6e0 (_vgnU_ifunc_wrapper)
+--21738-- REDIR: 0x50fa8d0 (libc.so.6:strcat) redirected to 0x4a2c6e0 (_vgnU_ifunc_wrapper)
+--21738-- REDIR: 0x50faeb0 (libc.so.6:rindex) redirected to 0x4a2c6e0 (_vgnU_ifunc_wrapper)
+--21738-- REDIR: 0x50fd5a0 (libc.so.6:rawmemchr) redirected to 0x4a2c6e0 (_vgnU_ifunc_wrapper)
+--21738-- REDIR: 0x50fbce0 (libc.so.6:mempcpy) redirected to 0x4a2c6e0 (_vgnU_ifunc_wrapper)
+--21738-- REDIR: 0x50fbb10 (libc.so.6:bcmp) redirected to 0x4a2c6e0 (_vgnU_ifunc_wrapper)
+--21738-- REDIR: 0x50fae40 (libc.so.6:strncmp) redirected to 0x4a2c6e0 (_vgnU_ifunc_wrapper)
+--21738-- REDIR: 0x50fa940 (libc.so.6:strcmp) redirected to 0x4a2c6e0 (_vgnU_ifunc_wrapper)
+--21738-- REDIR: 0x50fbc40 (libc.so.6:memset) redirected to 0x4a2c6e0 (_vgnU_ifunc_wrapper)
+--21738-- REDIR: 0x5118ed0 (libc.so.6:wcschr) redirected to 0x4a2c6e0 (_vgnU_ifunc_wrapper)
+--21738-- REDIR: 0x50fade0 (libc.so.6:strnlen) redirected to 0x4a2c6e0 (_vgnU_ifunc_wrapper)
+--21738-- REDIR: 0x50fa9b0 (libc.so.6:strcspn) redirected to 0x4a2c6e0 (_vgnU_ifunc_wrapper)
+--21738-- REDIR: 0x50fbea0 (libc.so.6:strncasecmp) redirected to 0x4a2c6e0 (_vgnU_ifunc_wrapper)
+--21738-- REDIR: 0x50fa980 (libc.so.6:strcpy) redirected to 0x4a2c6e0 (_vgnU_ifunc_wrapper)
+--21738-- REDIR: 0x50fbfe0 (libc.so.6:memcpy@@GLIBC_2.14) redirected to 0x4a2c6e0 (_vgnU_ifunc_wrapper)
+--21738-- REDIR: 0x50faee0 (libc.so.6:strpbrk) redirected to 0x4a2c6e0 (_vgnU_ifunc_wrapper)
+--21738-- REDIR: 0x50fa900 (libc.so.6:index) redirected to 0x4a2c6e0 (_vgnU_ifunc_wrapper)
+--21738-- REDIR: 0x50fadb0 (libc.so.6:strlen) redirected to 0x4a2c6e0 (_vgnU_ifunc_wrapper)
+--21738-- REDIR: 0x51054a0 (libc.so.6:memrchr) redirected to 0x4a2c6e0 (_vgnU_ifunc_wrapper)
+--21738-- REDIR: 0x50fbef0 (libc.so.6:strcasecmp_l) redirected to 0x4a2c6e0 (_vgnU_ifunc_wrapper)
+--21738-- REDIR: 0x50fbae0 (libc.so.6:memchr) redirected to 0x4a2c6e0 (_vgnU_ifunc_wrapper)
+--21738-- REDIR: 0x5119c90 (libc.so.6:wcslen) redirected to 0x4a2c6e0 (_vgnU_ifunc_wrapper)
+--21738-- REDIR: 0x50fb190 (libc.so.6:strspn) redirected to 0x4a2c6e0 (_vgnU_ifunc_wrapper)
+--21738-- REDIR: 0x50fbe20 (libc.so.6:stpncpy) redirected to 0x4a2c6e0 (_vgnU_ifunc_wrapper)
+--21738-- REDIR: 0x50fbdf0 (libc.so.6:stpcpy) redirected to 0x4a2c6e0 (_vgnU_ifunc_wrapper)
+--21738-- REDIR: 0x50fd5d0 (libc.so.6:strchrnul) redirected to 0x4a2c6e0 (_vgnU_ifunc_wrapper)
+--21738-- REDIR: 0x50fbf40 (libc.so.6:strncasecmp_l) redirected to 0x4a2c6e0 (_vgnU_ifunc_wrapper)
+--21738-- REDIR: 0x51eb300 (libc.so.6:__strrchr_avx2) redirected to 0x4c34730 (rindex)
+--21738-- REDIR: 0x51ebe90 (libc.so.6:__memset_avx2_unaligned_erms) redirected to 0x4c385d0 (memset)
+--21738-- REDIR: 0x50f5d70 (libc.so.6:realloc) redirected to 0x4c33cb0 (realloc)
+--21738-- REDIR: 0x51eb4d0 (libc.so.6:__strlen_avx2) redirected to 0x4c34cf0 (strlen)
+--21738-- REDIR: 0x50f4140 (libc.so.6:malloc) redirected to 0x4c31aa0 (malloc)
+--21738-- REDIR: 0x50f4a30 (libc.so.6:free) redirected to 0x4c32cd0 (free)
+--21738-- REDIR: 0x50fb6c0 (libc.so.6:__GI_strstr) redirected to 0x4c39760 (__strstr_sse2)
+--21738-- REDIR: 0x51e7360 (libc.so.6:__memchr_avx2) redirected to 0x4c35f80 (memchr)
+--21738-- REDIR: 0x51eba10 (libc.so.6:__memcpy_avx_unaligned_erms) redirected to 0x4c386e0 (memmove)
+--21738-- REDIR: 0x51eaee0 (libc.so.6:__strchr_avx2) redirected to 0x4c34950 (index)
+--21738-- REDIR: 0x51e7ae0 (libc.so.6:__memcmp_avx2_movbe) redirected to 0x4c37e00 (bcmp)
+--21738-- REDIR: 0x50f7170 (libc.so.6:calloc) redirected to 0x4c33a70 (calloc)
+==21738== 
+==21738== Process terminating with default action of signal 2 (SIGINT)
+==21738==    at 0x517EA07: epoll_wait (epoll_wait.c:30)
+==21738==    by 0x10A30D: main (proxy.c:131)
+==21738== 
+==21738== HEAP SUMMARY:
+==21738==     in use at exit: 103,204 bytes in 3 blocks
+==21738==   total heap usage: 9 allocs, 6 frees, 109,672 bytes allocated
+==21738== 
+==21738== Searching for pointers to 3 not-freed blocks
+==21738== Checked 193,800 bytes
+==21738== 
+==21738== LEAK SUMMARY:
+==21738==    definitely lost: 0 bytes in 0 blocks
+==21738==    indirectly lost: 0 bytes in 0 blocks
+==21738==      possibly lost: 0 bytes in 0 blocks
+==21738==    still reachable: 103,204 bytes in 3 blocks
+==21738==         suppressed: 0 bytes in 0 blocks
+==21738== Reachable blocks (those to which a pointer was found) are not shown.
+==21738== To see them, rerun with: --leak-check=full --show-leak-kinds=all
+==21738== 
+==21738== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==21738== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
